@@ -1,5 +1,5 @@
 
-
+// Grabing required html tags
 var textInput = document.querySelector("#txt-input");
 var btnTranslate = document.querySelector("#btn-translate");
 var output =  document.querySelector("#output");
@@ -9,24 +9,27 @@ var output =  document.querySelector("#output");
 // console.log(btnTranslate);
 // console.log(output);
 
+// storing server api 
 var url = "https://api.funtranslations.com/translate/minion.json";
 
+
+// Method which will add user input along with server api call
 function getTranslatedUrl(txtMessage){
     return url+"?"+"text="+txtMessage;
 }
 
 
-
+// Method to handle unexpected fault
 function errorHandler(error) {
     console.log("error occured", error);
     alert("something wrong with server, Try again after some time... ")
 }
 
-
+// Method to Handle click event
 function clickHandler() {
-    var inputText = textInput.value; 
+    var inputText = textInput.value; // Taking user input
     
-    
+    // calling server for processing using fetch() api
     fetch(getTranslatedUrl(inputText))
     .then(response => response.json())
     .then(json => {
