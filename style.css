@@ -1,0 +1,41 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: yellow;
+}
+
+#output {
+    display: block;
+    width: 500px;
+    height: 30vh;
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid black;
+    background-color: white;
+    border-bottom-left-radius: 1rem;
+    
+}
+
+#txt-input {
+    display: block;
+    width: 500px;
+    height: 30vh;
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid black;
+    border-bottom-left-radius: 1rem;
+}
+
+#btn-translate {
+    border-radius: 1rem;
+    padding: 0.3rem;
+    margin-left: 15px;
+}
+
+#desc {
+    margin-top: 10px;
+    margin-left: 15px;
+}
